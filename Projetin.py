@@ -151,7 +151,7 @@ relogio = pygame.time.Clock()
 fonte_placar = pygame.font.Font(None, 74)
 
 # --- Criação e Início das Threads ---
-for r in raquetes_esquerda + raquetes_direita:
+for r in (raquetes_esquerda + raquetes_direita)*2:
     threading.Thread(target=thread_raquete, args=(r,), daemon=True).start()
 
 for i in range(len(bolas)):
